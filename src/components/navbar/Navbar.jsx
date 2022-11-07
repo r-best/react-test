@@ -15,14 +15,18 @@ const Navbar = () => {
             </div>
             <div className='navbar__menu'>
                 {toggleMenu
-                    ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
-                    : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />}
-                {toggleMenu && (
-                    <div className='navbar__menu-container'>
-                        <p><a href="/">Home</a></p>
-                        <p><a href="/projects">Projects</a></p>
-                    </div>
-                )}
+                    ? <RiCloseLine color="#fff" size={27} onClick={() => {
+                        document.getElementsByClassName('navbar__menu-container')[0].className = 'navbar__menu-container navbar__menu-container--close'
+                        setToggleMenu(false)
+                    }} />
+                    : <RiMenu3Line color="#fff" size={27} onClick={() => {
+                        document.getElementsByClassName('navbar__menu-container')[0].className = 'navbar__menu-container navbar__menu-container--open'
+                        setToggleMenu(true)
+                    }} />}
+                <div className='navbar__menu-container navbar__menu-container--close'>
+                    <p><a href="/">Home</a></p>
+                    <p><a href="/projects">Projects</a></p>
+                </div>
             </div>
         </div>
     )

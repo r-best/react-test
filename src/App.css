@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: conic-gradient(from 0deg at 50% 50%, rgba(255, 52, 52, 1) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 188, 212, 1) 21%, rgba(0, 0, 113, 1) 25%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, rgba(113, 0, 113, 1) 75%, rgb(255, 131, 255) 79%, rgba(0, 0, 0, 1) 80%, rgba(255, 52, 55, 1) 100%);
+  background: conic-gradient(from 0deg at 50% 50%, rgba(255, 52, 52, 1) 0%, rgba(0, 0, 0, 1) 20%, var(--blue-primary) 21%, var(--blue-secondary) 25%, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, var(--pink-secondary) 75%, var(--pink-primary) 79%, rgba(0, 0, 0, 1) 80%, rgba(255, 52, 55, 1) 100%);
 
   color: var(--font-color)
 }

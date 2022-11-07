@@ -13,5 +13,11 @@ code {
 }
 
 :root {
-  --font-color: white
+  --font-color: white;
+  --background-primary: #060034;
+
+  --pink-primary: rgba(255, 131, 255, 1);
+  --pink-secondary: rgba(113, 0, 113, 1);
+  --blue-primary: rgba(0, 188, 212, 1);
+  --blue-secondary: rgba(0, 0, 113, 1);
 }
