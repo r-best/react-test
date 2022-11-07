@@ -1,0 +1,11 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: #060034;
+    /* background-color: #ffffff; */
+    width: 50%;
+    min-height: 70vh;
+    border-radius: 25px;
+    box-shadow: -15px -10px 5px 0px rgba(0, 188, 212, 1), 15px 10px 5px 0px rgb(255, 131, 255);
+}
