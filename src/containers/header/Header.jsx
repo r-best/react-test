@@ -1,11 +1,22 @@
 import React from 'react';
-import Navbar from '../../components/navbar/Navbar';
+import { NavBar } from '../../components';
 import "./header.css";
+
+const routes = [
+    {
+        name: "Home",
+        path: "/"
+    },
+    {
+        name: "Projects",
+        path: "/projects"
+    }
+]
 
 const Header = () => {
     return (
         <div className='header'>
-            <Navbar />
+            <NavBar routes={routes}/>
         </div>
     )
 };

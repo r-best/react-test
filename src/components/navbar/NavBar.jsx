@@ -3,14 +3,15 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
 
 import "./navbar.css";
 
-const Navbar = () => {
+const NavBar = ({ routes }) => {
     const [toggleMenu, setToggleMenu] = useState(false);
     return (
         <div className='navbar'>
             <div className='navbar__links'>
                 <div className='navbar__links-container'>
-                    <p><a href="/">Home</a></p>
-                    <p><a href="/projects">Projects</a></p>
+                    {routes.map((item, i) => (
+                        <p><a href={item.path}>{item.name}</a></p>
+                    ))}
                 </div>
             </div>
             <div className='navbar__menu'>
@@ -24,12 +25,13 @@ const Navbar = () => {
                         setToggleMenu(true)
                     }} />}
                 <div className='navbar__menu-container navbar__menu-container--close'>
-                    <p><a href="/">Home</a></p>
-                    <p><a href="/projects">Projects</a></p>
+                    {routes.map((item, i) => (
+                        <p><a href={item.path}>{item.name}</a></p>
+                    ))}
                 </div>
             </div>
         </div>
     )
 };
 
-export default Navbar;
+export default NavBar;
