@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdOpenInNew } from 'react-icons/md'
 
 import "./projectcard.css";
 
@@ -12,9 +13,9 @@ const ProjectCard = ({image, title, desc_arr, github, live}) => {
                     {desc_arr.map((item, i) => (<p>{item}</p>))}
                 </div>
                 <div className='projects__card-text_links'>
-                    <button className='projects__card-text_links-github' target="_blank" rel="noreferrer" href={github}>Github</button>
+                    <a className='projects__card-text_links-github' target="_blank" rel="noreferrer" href={github}>Github<MdOpenInNew /></a>
                     {live!=null && (
-                        <button className='projects__card-text_links-live' target="_blank" rel="noreferrer" href={live}>Live Site</button>
+                        <a className='projects__card-text_links-live' target="_blank" rel="noreferrer" href={live}>Live Site<MdOpenInNew /></a>
                     )}
                 </div>
             </div>

@@ -1,6 +1,32 @@
 .home {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
     /* background-color: #ffffff; */
+}
+
+.home__title {
+    margin-bottom: 10px;
+}
+
+.home__subtitle {
+    margin-top: 0;
+}
+
+.home__links {
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
+.home__links a {
+    margin: 0 10px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: black;
+    background-color: var(--blue-primary);
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: inline;
 }
