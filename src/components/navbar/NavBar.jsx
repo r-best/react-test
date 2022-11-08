@@ -10,7 +10,7 @@ const NavBar = ({ routes }) => {
             <div className='navbar__links'>
                 <div className='navbar__links-container'>
                     {routes.map((item, i) => (
-                        <p><a href={item.path}>{item.name}</a></p>
+                        <p key={i}><a href={item.path}>{item.name}</a></p>
                     ))}
                 </div>
             </div>
@@ -26,7 +26,7 @@ const NavBar = ({ routes }) => {
                     }} />}
                 <div className='navbar__menu-container navbar__menu-container--close'>
                     {routes.map((item, i) => (
-                        <p><a href={item.path}>{item.name}</a></p>
+                        <p key={i}><a href={item.path}>{item.name}</a></p>
                     ))}
                 </div>
             </div>

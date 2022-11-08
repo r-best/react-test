@@ -3,7 +3,7 @@ import "./content.css";
 
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import { Home, Projects } from '../../pages'
+import { Home, Projects, TweetGen } from '../../pages'
 
 const Content = () => {
     return (
@@ -12,6 +12,7 @@ const Content = () => {
             <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/projects' element={<Projects />} />
+                <Route exact path='/tweetgen' element={<TweetGen />} />
             </Routes>
             </BrowserRouter>
         </div>

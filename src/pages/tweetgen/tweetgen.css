@@ -1,0 +1,111 @@
+.tweetgen {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tweetgen__props {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.tweetgen__props div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.tweetgen__props div input {
+    width: 70px;
+}
+
+.tweetgen__btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.tweetgen button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 200px;
+    background-color: var(--blue-primary);
+    border: none;
+    border-radius: 10px;
+}
+
+.tweetgen__users {
+    
+}
+
+.tweetgen__users-user {
+    margin: 20px 0;
+}
+
+.tweetgen__users-user button {
+    display: inline;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+}
+
+.tweetgen__users-user input {
+    height: 30px;
+    width: 50%;
+    margin: 0 2px;
+}
+
+.tweetgen__users-user input[type=number] {
+    height: 30px;
+    width: 50px;
+    margin: 0 10px;
+}
+
+.tweetgen__loading {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.tweetgen__tweets {
+}
+
+.tweetgen__tweets-tweet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.tweetgen__tweets-tweet img {
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.tweetgen__tweets-tweet_content {
+    width: 100%;
+}
+
+.tweetgen__tweets-tweet_content p {
+    text-align: left;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.tweetgen__tweets-tweet_content-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

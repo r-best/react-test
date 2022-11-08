@@ -12,7 +12,7 @@ const projects = [
         title: "Tweet Generator",
         desc: [lorem],
         github: "https://github.com/r-best/tweetgen-lambda",
-        livelink: "http://tweetgen.bobbybest.dev",
+        livelink: "/tweetgen",
     },
     {
         image: temp,

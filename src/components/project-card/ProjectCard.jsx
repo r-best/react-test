@@ -15,7 +15,7 @@ const ProjectCard = ({image, title, desc_arr, github, live}) => {
                 <div className='projects__card-text_links'>
                     <a className='projects__card-text_links-github' target="_blank" rel="noreferrer" href={github}>Github<MdOpenInNew /></a>
                     {live!=null && (
-                        <a className='projects__card-text_links-live' target="_blank" rel="noreferrer" href={live}>Live Site<MdOpenInNew /></a>
+                        <a className='projects__card-text_links-live' href={live}>Live Site</a>
                     )}
                 </div>
             </div>
