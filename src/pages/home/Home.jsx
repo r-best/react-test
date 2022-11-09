@@ -11,7 +11,7 @@ const Home = () => {
             <p>You'll wait for me to add more details</p>
             <div className='home__links'>
                 <a className='home__links' target="_blank" rel="noreferrer" href="https://github.com/r-best">Github<MdOpenInNew /></a>
-                <a className='home__links' target="_blank" rel="noreferrer" href="">LinkedIn<MdOpenInNew /></a>
+                <a className='home__links' target="_blank" rel="noreferrer" href="/">LinkedIn<MdOpenInNew /></a>
             </div>
         </div>
     )

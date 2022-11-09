@@ -1,0 +1,42 @@
+.tweet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.tweet img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+.tweet__content {
+    width: 100%;
+    padding: 10px;
+}
+
+.tweet__content-displayname {
+    text-align: left;
+    width: 100%;
+    margin: 0;
+}
+
+.tweet__content-screenname {
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    font-style: italic;
+    color: grey;
+}
+
+.tweet__content-tweet {
+    text-align: left;
+    width: 100%;
+}
+
+.tweet__content-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
