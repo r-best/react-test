@@ -16,7 +16,7 @@
 
 .home__links {
     flex-direction: row;
-    margin-top: 1rem;
+    margin: 2rem 0;
 }
 
 .home__links a {
@@ -29,4 +29,21 @@
     outline: none;
     border: none;
     display: inline;
+}
+
+.home__langs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.home__langs img {
+    height: 100px;
+    width: 100px;
+}
+
+.home__certifications {
+    flex-direction: row;
+    align-items: center;
 }
