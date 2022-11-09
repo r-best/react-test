@@ -10,6 +10,10 @@ const routes = [
     {
         name: "Projects",
         path: "/projects"
+    },
+    {
+        name: "Rocks",
+        path: "/rocks"
     }
 ]
 

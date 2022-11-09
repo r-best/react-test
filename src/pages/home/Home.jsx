@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { MdOpenInNew } from 'react-icons/md'
 
+import { Logos } from '../../assets';
+
 import "./home.css";
 
 const Home = () => {
@@ -21,39 +23,39 @@ const Home = () => {
             <p>Extensive experience with AWS architecture and services, and an interest in natural language processing and ML topics.</p>
             <div className='home__links'>
                 <a className='home__links' target="_blank" rel="noreferrer" href="https://github.com/r-best">Github<MdOpenInNew /></a>
-                <a className='home__links' target="_blank" rel="noreferrer" href="/">LinkedIn<MdOpenInNew /></a>
+                {/* <a className='home__links' target="_blank" rel="noreferrer" href="/">LinkedIn<MdOpenInNew /></a> */}
             </div>
 
             <h2>Preferred Languages/Technologies</h2>
             <div className='home__langs'>
                 <div>
-                    <img src="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png" alt="Golang logo" />
+                    <img src={Logos.golang} alt="Golang logo" />
                     <p>Golang</p>
                 </div>
                 <div>
-                    <img src="https://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png" alt="Python logo" />
+                    <img src={Logos.python} alt="Python logo" />
                     <p>Python</p>
                 </div>
             </div>
             <div className='home__langs'>
                 <div>
-                    <img src="https://cdn.worldvectorlogo.com/logos/aws-lambda-1.svg" alt="AWS Lambda logo" />
+                    <img src={Logos.lambda} alt="AWS Lambda logo" />
                     <p>AWS Lambda</p>
                 </div>
             </div>
             <div className='home__langs'>
                 <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript logo" />
+                    <img src={Logos.js} alt="JavaScript logo" />
                     <p>JavaScript</p>
                 </div>
                 <div>
-                    <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="React logo" />
+                    <img src={Logos.react} alt="React logo" />
                     <p>React Web/Native</p>
                 </div>
             </div>
             <div className='home__langs'>
                 <div>
-                    <img src="https://img1.pnghut.com/11/14/20/XW8y3mmuwn/computer-program-text-software-objectoriented-programming-java-servlet.jpg" alt="Java logo" />
+                    <img src={Logos.java} alt="Java logo" />
                     <p>Java</p>
                 </div>
             </div>

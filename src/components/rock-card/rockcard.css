@@ -1,0 +1,25 @@
+.rockcard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rockcard-image {
+    height: 200px;
+    cursor: pointer;
+}
+
+.rockcard-text {
+    text-align: left;
+    padding: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .rockcard {
+        flex-direction: column;
+    }
+
+    .rockcard-text {
+        text-align: center;
+    }
+}

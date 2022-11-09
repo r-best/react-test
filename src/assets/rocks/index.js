@@ -1,0 +1,10 @@
+export { default as amethyst } from './amethyst.jpg';
+export { default as bismuth } from './bismuth.jpg';
+export { default as citrine } from './citrine.jpg';
+export { default as fluorite } from './fluorite.jpg';
+export { default as garnet } from './garnet.jpg';
+export { default as labradorite } from './labradorite.jpg';
+export { default as rhodochrosite } from './rhodochrosite.jpg';
+export { default as rhodonite } from './rhodonite.jpg';
+export { default as ruby } from './ruby.jpg';
+export { default as rutile } from './rutile.jpg';
