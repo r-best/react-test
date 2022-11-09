@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { FiPlus, FiTrash2 } from 'react-icons/fi';
 import { ThreeCircles } from 'react-loader-spinner'
 
-import temp from '../../assets/temp.jpeg'
+import placeholder from '../../assets/placeholder.png'
 
 import "./tweetgen.css";
 import { Tweet } from '../../components';
@@ -29,9 +29,9 @@ const TweetGen = () => {
 
     const [n, setN] = useState(2);
     const [m, setM] = useState(10);
-    const [users, setUsers] = useState([{icon: temp, displayname: "", screenname: "", count: 50}]);
+    const [users, setUsers] = useState([{icon: placeholder, displayname: "", screenname: "", count: 50}]);
     const addUser = () => {
-        setUsers([...users, {icon: temp, displayname: "", screenname: "", count: 50}])
+        setUsers([...users, {icon: placeholder, displayname: "", screenname: "", count: 50}])
     };
     const removeUser = i => {
         users.splice(i, 1)
@@ -64,6 +64,12 @@ const TweetGen = () => {
                         console.log("ERROR FETCHING ICON")
                         console.log(err)
                         toast(err)
+                        for(let i = 0; i < users.length; i++){
+                            if(users[i].screenname === screenname) {
+                                users[i].icon = placeholder;
+                            }
+                        }
+                        setUsers([...users])
                     }
                 )
         }, 1000))
@@ -77,6 +83,13 @@ const TweetGen = () => {
         console.log("Generating Tweets!")
         setTweetsLoading(true)
         setGeneratedTweets([])
+        for(let i = 0; i < users.length; i++){
+            if(users[i].screenname === "" && users.length > 1){
+                users.splice(i, 1)
+                i--;
+            }
+        }
+        setUsers([...users])
         generateTweets(users, n, m)
             .then(
                 res => {

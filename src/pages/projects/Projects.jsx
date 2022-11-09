@@ -1,5 +1,5 @@
 import React from 'react';
-import temp from '../../assets/temp.jpeg'
+import placeholder from '../../assets/placeholder.png'
 import { ProjectCard } from '../../components';
 
 import "./projects.css";
@@ -8,28 +8,28 @@ const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
 
 const projects = [
     {
-        image: temp,
+        image: placeholder,
         title: "Tweet Generator",
         desc: [lorem],
         github: "https://github.com/r-best/tweetgen-lambda",
         livelink: "/tweetgen",
     },
     {
-        image: temp,
+        image: placeholder,
         title: "Minecraft Auto-Fisher",
         desc: [lorem],
         github: "https://github.com/r-best/MinecraftAutoFisher",
         livelink: null,
     },
     {
-        image: temp,
+        image: placeholder,
         title: "Arduino Nanoleaf",
         desc: [lorem],
         github: "https://github.com/r-best/NanoleafDIY",
         livelink: null,
     },
     {
-        image: temp,
+        image: placeholder,
         title: "\"Bobby Experiments with Phonetics\"",
         desc: [lorem],
         github: "https://github.com/r-best/NewWordGenerator",
