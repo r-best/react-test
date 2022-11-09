@@ -28,7 +28,25 @@ const TweetGen = () => {
     const [generatedTweets, setGeneratedTweets] = useState([]);
 
     const [n, setN] = useState(2);
+    const updateN = (e) => {
+        let newN = parseInt(e.target.value);
+        if(isNaN(newN) || newN < 2 || newN > 4)
+            setN(prev => prev)
+        else
+            setN(newN)
+
+    }
+
     const [m, setM] = useState(10);
+    const updateM = (e) => {
+        let newM = parseInt(e.target.value);
+        if(isNaN(newM) || newM < 1 || newM > 1000)
+            setM(prev => prev)
+        else
+            setM(newM)
+
+    }
+
     const [users, setUsers] = useState([{icon: placeholder, displayname: "", screenname: "", count: 50}]);
     const addUser = () => {
         setUsers([...users, {icon: placeholder, displayname: "", screenname: "", count: 50}])
@@ -75,7 +93,9 @@ const TweetGen = () => {
         }, 1000))
     };
     const updateNum = (e, i) => {
-        users[i].count = e.target.value
+        let newCount = parseInt(e.target.value)
+        if(!isNaN(newCount) && newCount >= 1 && newCount <= 500)
+            users[i].count = newCount
         setUsers([...users])
     };
 
@@ -122,8 +142,8 @@ const TweetGen = () => {
             <h1>Tweet Generator</h1>
             <p>Enter a list of Twitter users and a number of tweets to retrieve for each, and the program will generate a set of new tweets to mimic them</p>
             <div className='tweetgen__props'>
-                <div><span>Value of N (model complexity)</span><input type="number" min={2} max={6} value={n} onChange={e => {setN(e.target.value)}} /></div>
-                <div><span>Number of Tweets to Generate</span><input type="number" min={1} max={1000} value={m} onChange={e => {setM(e.target.value)}} /></div>
+                <div><span>Value of N (model complexity)</span><input type="number" min={2} max={4} value={n} onChange={updateN} /></div>
+                <div><span>Number of Tweets to Generate</span><input type="number" min={1} max={1000} value={m} onChange={updateM} /></div>
             </div>
             <button className="tweetgen__adduser" onClick={addUser}><FiPlus />Add User</button>
             <div className='tweetgen__users'>
