@@ -1,5 +1,5 @@
 import React from 'react';
-import { arpabet, fishingrod, placeholder, tweetGenThumbnail } from '../../assets'
+import { arpabet, fishingrod, tweetGenThumbnail } from '../../assets'
 import { ProjectCard } from '../../components';
 
 import "./projects.css";

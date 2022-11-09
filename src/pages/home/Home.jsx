@@ -27,33 +27,33 @@ const Home = () => {
             <h2>Preferred Languages/Technologies</h2>
             <div className='home__langs'>
                 <div>
-                    <img src="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png" />
+                    <img src="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png" alt="Golang logo" />
                     <p>Golang</p>
                 </div>
                 <div>
-                    <img src="https://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png" />
+                    <img src="https://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png" alt="Python logo" />
                     <p>Python</p>
                 </div>
             </div>
             <div className='home__langs'>
                 <div>
-                    <img src="https://cdn.worldvectorlogo.com/logos/aws-lambda-1.svg" />
+                    <img src="https://cdn.worldvectorlogo.com/logos/aws-lambda-1.svg" alt="AWS Lambda logo" />
                     <p>AWS Lambda</p>
                 </div>
             </div>
             <div className='home__langs'>
                 <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript logo" />
                     <p>JavaScript</p>
                 </div>
                 <div>
-                    <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" />
+                    <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="React logo" />
                     <p>React Web/Native</p>
                 </div>
             </div>
             <div className='home__langs'>
                 <div>
-                    <img src="https://img1.pnghut.com/11/14/20/XW8y3mmuwn/computer-program-text-software-objectoriented-programming-java-servlet.jpg" />
+                    <img src="https://img1.pnghut.com/11/14/20/XW8y3mmuwn/computer-program-text-software-objectoriented-programming-java-servlet.jpg" alt="Java logo" />
                     <p>Java</p>
                 </div>
             </div>
