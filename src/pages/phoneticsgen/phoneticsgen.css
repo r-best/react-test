@@ -1,0 +1,45 @@
+.phonetics {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.phonetics__props {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.phonetics__props div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.phonetics__props div input {
+    width: 70px;
+}
+
+.phonetics button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 200px;
+    background-color: var(--blue-primary);
+    border: none;
+    border-radius: 10px;
+}
+
+.phonetics__loading {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}

@@ -47,7 +47,7 @@ const projects = [
         ],
         status: "Still in original Python script form, needs to be enhanced and potentially refactored into a form that can be put up as a live demo",
         github: "https://github.com/r-best/NewWordGenerator",
-        livelink: null,
+        livelink: "/phonetic-generator",
     },
 ]
 

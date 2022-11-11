@@ -3,7 +3,7 @@ import "./content.css";
 
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import { Home, Projects, Rocks, TweetGen } from '../../pages'
+import { Home, PhoneticsGen, Projects, Rocks, TweetGen } from '../../pages'
 
 const Content = () => {
     return (
@@ -14,6 +14,7 @@ const Content = () => {
                 <Route exact path='/projects' element={<Projects />} />
                 <Route exact path='/rocks' element={<Rocks />} />
                 <Route exact path='/tweetgen' element={<TweetGen />} />
+                <Route exact path='/phonetic-generator' element={<PhoneticsGen />} />
             </Routes>
             </BrowserRouter>
         </div>
