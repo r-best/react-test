@@ -28,17 +28,6 @@ const projects = [
         livelink: null,
     },
     {
-        image: "https://github.com/r-best/NanoleafDIY/raw/master/docs/Architecture.png",
-        title: "Arduino Nanoleaf",
-        desc: [
-            "Built on a whim, I wanted to see if I could recreate Nanoleaf panels myself. I used a set of Arduino Nanos (one per panel) and designed a simple serial communication protocol to allow one control node to broadcast color instructions to all the connected nodes.",
-            "The control node was an ESP32 controller that broadcast itself on the local WiFi to be picked up by a companion React Native Android app. The app synced up with the control node to read the current state of all the connected panels, and allow the user to set new colors and patterns as desired."
-        ],
-        status: "Arduinos and ESP32 all communicating and lighting up properly, basic app working and able to control the panels, panel frames 3d printed, never finished final polishing and full assembly (I didn't want to solder)",
-        github: "https://github.com/r-best/NanoleafDIY",
-        livelink: null,
-    },
-    {
         image: arpabet,
         title: "\"Bobby Experiments with Phonetics\"",
         desc: [
@@ -48,6 +37,17 @@ const projects = [
         status: "Still in original Python script form, needs to be enhanced and potentially refactored into a form that can be put up as a live demo",
         github: "https://github.com/r-best/NewWordGenerator",
         livelink: "/phonetic-generator",
+    },
+    {
+        image: "https://github.com/r-best/NanoleafDIY/raw/master/docs/Architecture.png",
+        title: "Arduino Nanoleaf",
+        desc: [
+            "Built on a whim, I wanted to see if I could recreate Nanoleaf panels myself. I used a set of Arduino Nanos (one per panel) and designed a simple serial communication protocol to allow one control node to broadcast color instructions to all the connected nodes.",
+            "The control node was an ESP32 controller that broadcast itself on the local WiFi to be picked up by a companion React Native Android app. The app synced up with the control node to read the current state of all the connected panels, and allow the user to set new colors and patterns as desired."
+        ],
+        status: "Arduinos and ESP32 all communicating and lighting up properly, basic app working and able to control the panels, panel frames 3d printed, never finished final polishing and full assembly (I didn't want to solder)",
+        github: "https://github.com/r-best/NanoleafDIY",
+        livelink: null,
     },
 ]
 
