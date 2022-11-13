@@ -14,7 +14,14 @@
     margin-bottom: 20px;
 }
 
-.tweetgen__props div {
+.tweetgen__props-n {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.tweetgen__props-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,6 +31,14 @@
 
 .tweetgen__props div input {
     width: 70px;
+}
+
+.tweetgen__props-info {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .tweetgen__btns {

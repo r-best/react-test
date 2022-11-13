@@ -34,6 +34,10 @@
 }
 
 .phonetics__props-item_info {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 

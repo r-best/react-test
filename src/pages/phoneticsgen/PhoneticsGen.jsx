@@ -107,10 +107,15 @@ const PhoneticsGen = () => {
                     <span>
                         Value of N (model complexity)
                         <Tooltip title={
-                            <p className='tooltip'>Add a description of how N works</p>
+                            <div className='tooltip'>
+                                <p>N represents how many previous symbols the generator uses to determine which symbol should come next.</p>
+                                <p>For example, if we were generating words in a sentence, at N=2 we're only looking at the word that came just before, so we might see the word "your", and there are many words that could potentially come after that, so we just choose one at random.</p>
+                                <p>But at N=4, we would see the 3 previous words, "how was your". That gives us much more context, now our options for what could come next are things like "trip", "day", etc..</p>
+                                <p>So higher values of N give us more context and let us generate more convincing phrases, but also reduce the chances of the generations getting wild.</p>
+                            </div>
                         } placement="top" arrow>
-                            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'left'}}>
-                                <RiInformationLine className='phonetics__props-item_info' />
+                            <div className='phonetics__props-item_info'>
+                                <RiInformationLine />
                             </div>
                         </Tooltip>
                     </span>
