@@ -77,7 +77,6 @@ const PhoneticsGen = () => {
         <div className='phonetics'>
             <h1>Phonetic Word Generator</h1>
             <p>Select an available language model and value of N to use, and the program will use examples from the model to generate a brand new word!</p>
-            <p>N represents how many previous sounds the generator takes into account when creating a new word, i.e. the higher the value, the more convincing the generated words will sound. Personally I find that 3 and 4 make the best words; 2 starts to sound weird and 5 and 6 tend to just start recreating real words.</p>
             <p>Generated words are presented in International Phonetic Alphabet (IPA) format, which is a way of writing out how to pronounce a word; you might recognize it from Wikipedia, where it's commonly used at the start of an article to let you know how the subject is pronounced.</p>
             <div className='phonetics__props'>
                 <div className='phonetics__props-item'>
