@@ -55,7 +55,7 @@ const PhoneticsGen = () => {
         setLoading(true)
         setGeneratedWord(null)
         setGeneratedMp3(null)
-        generateWord(model, n)
+        generateWord(model.name, n)
             .then(
                 res => {
                     console.log("GENERATED WORD")
