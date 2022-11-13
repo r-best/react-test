@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { MdOpenInNew } from 'react-icons/md'
 
 import { Logos } from '../../assets';
+import { placeholder } from '../../assets';
 
 import "./home.css";
 
@@ -55,7 +56,7 @@ const Home = () => {
             </div>
             <div className='home__langs'>
                 <div>
-                    <img src={Logos.java} alt="Java logo" />
+                    <img src={placeholder} alt="Java logo" />
                     <p>Java</p>
                 </div>
             </div>

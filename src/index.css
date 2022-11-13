@@ -12,6 +12,17 @@ code {
     monospace;
 }
 
+.tooltip {
+  /* height: fit-content;
+  width: fit-content; */
+  padding: 10px 10px;
+  /* background-color: var(--blue-secondary);
+  box-shadow: -5px -5px 3px 0px var(--blue-primary), 5px 5px 3px 0px var(--pink-primary); */
+
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 :root {
   --font-color: white;
   --background-primary: #060034;

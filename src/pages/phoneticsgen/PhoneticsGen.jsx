@@ -1,25 +1,47 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { RiInformationLine } from 'react-icons/ri';
 import { toast } from 'react-toastify';
+import { Tooltip } from '@mui/material';
 
 import { ThreeCircles } from 'react-loader-spinner'
 
 import "./phoneticsgen.css";
 
-import { generateWord } from './PhoneticsGeneratorApi'
+import { getModels, generateWord } from './PhoneticsGeneratorApi'
 
-
-const MODELS = [
-    "CMUDict"
-]
 
 const PhoneticsGen = () => {
+    const [loadingModels, setLoadingModels] = useState(true);
+    const [MODELS, setModels] = useState([{name: "Loading..."}])
+    useEffect(() => {
+        getModels()
+        .then(
+            res => {
+                console.log("FETCHED LANGUAGE MODELS")
+                console.log(res)
+                setModels(res)
+                setModel(res[0])
+                setLoadingModels(false)
+            },
+            err => {
+                console.log("ERROR FETCHING LANGUAGE MODELS")
+                console.log(err)
+                toast(err)
+                let errMsg = [{name: "Error loading available models"}]
+                setModels(errMsg)
+                setModel(errMsg[0])
+                setLoadingModels(false)
+            }
+        ) // eslint-disable-next-line
+    }, []);
+
     const [loading, setLoading] = useState(false);
     const [generatedWord, setGeneratedWord] = useState(null);
     const [generatedMp3, setGeneratedMp3] = useState(null);
 
-    const [model, setModel] = useState("CMUDict");
+    const [model, setModel] = useState({name: "Loading..."});
 
-    const [n, setN] = useState(2);
+    const [n, setN] = useState(3);
     const updateN = (e) => {
         let newN = parseInt(e.target.value);
         if(isNaN(newN) || newN < 2 || newN > 6)
@@ -54,17 +76,46 @@ const PhoneticsGen = () => {
     return (
         <div className='phonetics'>
             <h1>Phonetic Word Generator</h1>
-            <p>Enter a list of Twitter users and a number of tweets to retrieve for each, and the program will generate a set of new tweets to mimic them</p>
+            <p>Select an available language model and value of N to use, and the program will use examples from the model to generate a brand new word!</p>
+            <p>N represents how many previous sounds the generator takes into account when creating a new word, i.e. the higher the value, the more convincing the generated words will sound. Personally I find that 3 and 4 make the best words; 2 starts to sound weird and 5 and 6 tend to just start recreating real words.</p>
+            <p>Generated words are presented in International Phonetic Alphabet (IPA) format, which is a way of writing out how to pronounce a word; you might recognize it from Wikipedia, where it's commonly used at the start of an article to let you know how the subject is pronounced.</p>
             <div className='phonetics__props'>
-                <div>
-                    <span>Language Model</span>
-                    <select name='model-selection' onChange={e => {setModel(e.target.value)}}>
-                        {MODELS.map((item, i) => (
-                            <option key={i} value={item}>{item}</option>
-                        ))}
-                    </select>
+                <div className='phonetics__props-item'>
+                    <span style={{ marginRight: '15px' }}>Language Model</span>
+                    <div className='phonetics__props-item_row'>
+                        <select name='model-selection' onChange={e => {console.log(e.target.value); setModel(e.target.value)}}>
+                            {MODELS.map((item, i) => (
+                                <option key={i} value={item.name}>{item.name} - {item.language}</option>
+                            ))}
+                        </select>
+                        {loadingModels === false && (
+                            <Tooltip title={
+                                <div className='tooltip'>
+                                    <h3>{model.name} - </h3>
+                                    <p>{model.desc}</p>
+                                    <p><a href={model.source} target="_blank" rel="noreferrer">[Dataset Link]</a></p>
+                                </div>
+                            } placement="top" arrow>
+                                <div className='phonetics__props-item_info'>
+                                    <RiInformationLine />
+                                </div>
+                            </Tooltip>
+                        )}
+                    </div>
                 </div>
-                <div><span>Value of N (model complexity)</span><input type="number" min={2} max={6} value={n} onChange={updateN} /></div>
+                <div className='phonetics__props-item'>
+                    <span>
+                        Value of N (model complexity)
+                        <Tooltip title={
+                            <p className='tooltip'>Add a description of how N works</p>
+                        } placement="top" arrow>
+                            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'left'}}>
+                                <RiInformationLine className='phonetics__props-item_info' />
+                            </div>
+                        </Tooltip>
+                    </span>
+                    <input type="number" min={2} max={6} value={n} onChange={updateN} />
+                </div>
             </div>
             <button onClick={() => {submit()}} disabled={loading}>
                 {loading
@@ -78,6 +129,7 @@ const PhoneticsGen = () => {
                 </div>
                 : (generatedWord !== null && 
                     <div className='phonetics__word'>
+                        <p>IPA representation:</p>
                         <h3>{generatedWord}</h3>
                         <audio controls src={generatedMp3} />
                     </div>

@@ -10,20 +10,39 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 70%;
+    width: 80%;
     margin-bottom: 20px;
-}
-
-.phonetics__props div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: fit-content;
     font-weight: bold;
 }
+.phonetics__props input {
+    width: 50px;
+}
 
-.phonetics__props div input {
-    width: 70px;
+.phonetics__props-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.phonetics__props-item_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+
+.phonetics__props-item_info {
+    cursor: pointer;
+}
+
+.phonetics__props-item span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .phonetics button {

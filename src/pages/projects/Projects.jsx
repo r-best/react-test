@@ -34,7 +34,7 @@ const projects = [
             "Experimental project inspired by the NieR: Automata soundtrack. The artist, Emi Evans, worked to write lyrics in something she called \"Chaos Language\", her interpretation of what modern languages would sound like thousands of years in the future. I built on my previous NLP experience to write a program that would generate new words that sound similar to an existing language given a dictionary of phonetics.",
             "Using CMU's English pronunciation dataset, I was able to generate some new words that sounded sorta similar to English. The results weren't great in the first version, but I'd like to revisit it and give it some extra polish to see how convincing it can get."
         ],
-        status: "Still in original Python script form, needs to be enhanced and potentially refactored into a form that can be put up as a live demo",
+        status: "Rebuilt and live on AWS Lambda! See below link",
         github: "https://github.com/r-best/NewWordGenerator",
         livelink: "/phonetic-generator",
     },

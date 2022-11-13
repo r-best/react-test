@@ -1,4 +1,23 @@
 const API_URL = "https://v2vjbpmbcop36a57wkfh5pp3d40itsex.lambda-url.us-east-1.on.aws"
+
+const getModels = () => {
+    return new Promise((resolve, reject) => {
+        fetch(`${API_URL}/models`, {
+            method: 'GET',
+        })
+        .then(response => response.json())
+        .then((json) => {
+            if (json.error !== undefined)
+                return reject(json.error)
+            return resolve(json.models)
+        })
+        .catch(err => {
+            console.log(err)
+            return reject("Unknown Error")
+        })
+    })
+};
+
 const generateWord = (model, N) => {
     return new Promise((resolve, reject) => {
         fetch(`${API_URL}/`, {
@@ -13,7 +32,7 @@ const generateWord = (model, N) => {
             })
         })
         .then(response => response.json())
-        .then(async (json) => {
+        .then((json) => {
             if (json.error !== undefined)
                 return reject(json.error)
             return resolve({
@@ -28,4 +47,4 @@ const generateWord = (model, N) => {
     })
 };
 
-export { generateWord };
+export { getModels, generateWord };
