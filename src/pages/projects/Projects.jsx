@@ -6,13 +6,26 @@ import "./projects.css";
 
 const projects = [
     {
-        image: tweetGenThumbnail,
-        title: "Tweet Generator",
+        image: arpabet,
+        title: "\"Bobby Experiments with Phonetics\"",
         desc: [
+            "Experimental project inspired by the NieR: Automata soundtrack. The artist, Emi Evans, wrote lyrics in her interpretation of what modern languages would sound like thousands of years in the future (dubbed \"Chaos Language\"). I built on my previous NLP experience to write a program that would generate new words that sound similar to an existing language given a dictionary of phonetics.",
+            "Using CMU's English pronunciation dataset, I was able to generate some new words that sounded sorta similar to English. The results weren't great in the first version, but I'd like to revisit it and give it some extra polish to see how convincing it can get."
+        ],
+        status: "Rebuilt and live on AWS Lambda! See below link",
+        github: "https://github.com/r-best/NewWordGenerator",
+        livelink: "/phonetic-generator",
+    },
+    {
+        image: tweetGenThumbnail,
+        title: "Tweet Generator (Defunct)",
+        desc: [
+            "THIS PROJECT NO LONGER FUNCTIONS AS OF FEB. 2023 DUE TO ELON MUSK'S NEW $100/MONTH REQUIREMENT FOR BASIC TWITTER API ACCESS.",
+            "ALL REQUESTS WILL RETURN AN ERROR AS API ACCESS HAS BEEN REVOKED",
             "Originally built for an NLP class I took in college, I've rehashed this project over the years anytime I wanted to learn a new programming language, and now it finally has a proper home on my website!",
             "Takes in a set of Twitter users and builds a simple N-gram model to generate new tweets based off of what they've posted."
         ],
-        status: "Rebuilt and live on AWS Lambda! See below link",
+        status: "DEFUNCT. Tragically killed by the questionable business decisions of a large baby with too much money.",
         github: "https://github.com/r-best/tweetgen-lambda",
         livelink: "/tweetgen",
     },
@@ -26,17 +39,6 @@ const projects = [
         status: "Functioning, documentation needs improvement so others can set it up without issue",
         github: "https://github.com/r-best/MinecraftAutoFisher",
         livelink: null,
-    },
-    {
-        image: arpabet,
-        title: "\"Bobby Experiments with Phonetics\"",
-        desc: [
-            "Experimental project inspired by the NieR: Automata soundtrack. The artist, Emi Evans, worked to write lyrics in something she called \"Chaos Language\", her interpretation of what modern languages would sound like thousands of years in the future. I built on my previous NLP experience to write a program that would generate new words that sound similar to an existing language given a dictionary of phonetics.",
-            "Using CMU's English pronunciation dataset, I was able to generate some new words that sounded sorta similar to English. The results weren't great in the first version, but I'd like to revisit it and give it some extra polish to see how convincing it can get."
-        ],
-        status: "Rebuilt and live on AWS Lambda! See below link",
-        github: "https://github.com/r-best/NewWordGenerator",
-        livelink: "/phonetic-generator",
     },
     {
         image: "https://github.com/r-best/NanoleafDIY/raw/master/docs/Architecture.png",

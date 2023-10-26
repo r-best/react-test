@@ -8,52 +8,78 @@ const ROCKS = [
     {
         image: RockPics.amethyst,
         name: "Amethyst",
-        desc: []
+        desc: [
+            "Unknown Origin"
+        ]
     },
     {
         image: RockPics.bismuth,
         name: "Bismuth",
-        desc: []
+        desc: [
+            "Smithsonian Air & Space Museum gift shop"
+        ]
     },
     {
         image: RockPics.citrine,
         name: "Citrine",
-        desc: []
+        desc: [
+            "Unknown Origin"
+        ]
     },
     {
         image: RockPics.fluorite,
         name: "Fluorite",
-        desc: []
+        desc: [
+            "Mandrosonoro, Madagascar",
+            "From Packard's Stamp and Rock Shop"
+        ]
     },
     {
         image: RockPics.garnet,
         name: "Garnet",
-        desc: []
+        desc: [
+            "Unknown Origin",
+            "From Richmond, VA Gem and Mineral Society annual rock swap (2019)"
+        ]
     },
     {
         image: RockPics.labradorite,
         name: "Labradorite",
-        desc: []
+        desc: [
+            "Unknown Origin"
+        ]
     },
     {
         image: RockPics.rhodochrosite,
         name: "Rhodochrosite",
-        desc: []
+        desc: [
+            "Guangzi, China",
+            "From Packard's Stamp and Rock Shop"
+        ]
     },
     {
         image: RockPics.rhodonite,
         name: "Rhodonite",
-        desc: []
+        desc: [
+            "Brazil",
+            "From Packard's Stamp and Rock Shop"
+        ]
     },
     {
         image: RockPics.ruby,
         name: "Ruby",
-        desc: []
+        desc: [
+            "Africa",
+            "From Packard's Stamp and Rock Shop"
+        ]
     },
     {
         image: RockPics.rutile,
         name: "Rutile",
-        desc: []
+        desc: [
+            "Graves Mt, Georgia",
+            "From Richmond, VA Gem and Mineral Society annual rock swap (2019)"
+        ]
     },
 ]
 
@@ -71,15 +97,17 @@ const Rocks = () => {
                 </div>
             }
             <h1>Cool Rocks</h1>
-            {ROCKS.map((item, i) => (
-                <div key={i}>
-                    <RockCard 
-                        image={item.image} 
-                        name={item.name} 
-                        desc_arr={item.desc}
-                        fullViewCallback={openFullImgView} />
-                </div>
-            ))}
+            <div className='rocks-grid'>
+                {ROCKS.map((item, i) => (
+                    <div key={i}>
+                        <RockCard 
+                            image={item.image} 
+                            name={item.name} 
+                            desc_arr={item.desc}
+                            fullViewCallback={openFullImgView} />
+                    </div>
+                ))}
+            </div>
         </div>
     )
 };

@@ -6,8 +6,9 @@
     /* background-color: #ffffff; */
 }
 
-.rocks div {
-    margin: 10px 0;
+.rocks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
 }
 
 #fullSizeImgView {
@@ -16,7 +17,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(50, 50, 50, 0.90);
+    background-color: rgba(50, 50, 50, 0.80);
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -25,5 +26,11 @@
 }
 
 #fullSizeImgView img {
-    width: 75vw;
+    height: 95vh;
+}
+
+@media screen and (max-width: 700px) {
+    .rocks-grid {
+        grid-template-columns: repeat(1, 100%);
+    }
 }

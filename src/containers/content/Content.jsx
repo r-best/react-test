@@ -11,8 +11,8 @@ const Content = () => {
             <BrowserRouter>
             <Routes>
                 <Route exact path='/' element={<Home />} />
-                <Route exact path='/projects' element={<Projects />} />
                 <Route exact path='/rocks' element={<Rocks />} />
+                <Route exact path='/projects' element={<Projects />} />
                 <Route exact path='/tweetgen' element={<TweetGen />} />
                 <Route exact path='/phonetic-generator' element={<PhoneticsGen />} />
             </Routes>
