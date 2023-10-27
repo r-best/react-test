@@ -14,4 +14,12 @@
 
 #fullSizeImgView img {
     height: 95vh;
+    width: auto;
+}
+
+@media screen and (max-width: 700px) {
+    #fullSizeImgView img {
+        height: auto;
+        width: 95vw;
+    }
 }
