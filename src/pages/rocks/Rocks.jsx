@@ -8,78 +8,74 @@ const ROCKS = [
     {
         image: RockPics.amethyst,
         name: "Amethyst",
-        desc: [
-            "Unknown Origin"
-        ]
+        origin: "Unknown",
+        obtained_at: "I forgot",
+        desc: []
     },
     {
         image: RockPics.bismuth,
         name: "Bismuth",
-        desc: [
-            "Smithsonian Air & Space Museum gift shop"
-        ]
+        origin: "Unknown",
+        obtained_at: "Smithsonian Air & Space Museum gift shop",
+        desc: []
     },
     {
         image: RockPics.citrine,
         name: "Citrine",
-        desc: [
-            "Unknown Origin"
-        ]
+        origin: "Unknown",
+        obtained_at: "I forgot",
+        desc: []
     },
     {
         image: RockPics.fluorite,
         name: "Fluorite",
-        desc: [
-            "Mandrosonoro, Madagascar",
-            "From Packard's Stamp and Rock Shop"
-        ]
+        origin: "Mandrosonoro, Madagascar",
+        obtained_at: "Packard's Stamp and Rock Shop",
+        desc: []
     },
     {
         image: RockPics.garnet,
         name: "Garnet",
-        desc: [
-            "Unknown Origin",
-            "From Richmond, VA Gem and Mineral Society annual rock swap (2019)"
-        ]
+        origin: "Unknown",
+        obtained_at: "Richmond, VA Gem and Mineral Society annual rock swap (2019)",
+        desc: []
     },
     {
         image: RockPics.labradorite,
         name: "Labradorite",
-        desc: [
-            "Unknown Origin"
-        ]
+        origin: "Unknown",
+        obtained_at: "I forgot",
+        desc: []
     },
     {
         image: RockPics.rhodochrosite,
         name: "Rhodochrosite",
-        desc: [
-            "Guangzi, China",
-            "From Packard's Stamp and Rock Shop"
-        ]
+        origin: "Guangzi, China",
+        obtained_at: "Packard's Stamp and Rock Shop",
+        desc: []
     },
     {
         image: RockPics.rhodonite,
         name: "Rhodonite",
-        desc: [
-            "Brazil",
-            "From Packard's Stamp and Rock Shop"
-        ]
+        origin: "Brazil",
+        obtained_at: "Packard's Stamp and Rock Shop",
+        desc: []
     },
     {
         image: RockPics.ruby,
         name: "Ruby",
+        origin: "Africa",
+        obtained_at: "Packard's Stamp and Rock Shop",
         desc: [
-            "Africa",
-            "From Packard's Stamp and Rock Shop"
+            "Fluoresces under UV light!"
         ]
     },
     {
         image: RockPics.rutile,
         name: "Rutile",
-        desc: [
-            "Graves Mt, Georgia",
-            "From Richmond, VA Gem and Mineral Society annual rock swap (2019)"
-        ]
+        origin: "Graves Mt, Georgia",
+        obtained_at: "Richmond, VA Gem and Mineral Society annual rock swap (2019)",
+        desc: []
     },
 ]
 
@@ -93,6 +89,8 @@ const Rocks = () => {
                         <RockCard 
                             image={item.image} 
                             name={item.name} 
+                            origin={item.origin} 
+                            obtained_at={item.obtained_at}
                             desc_arr={item.desc} />
                     </div>
                 ))}
