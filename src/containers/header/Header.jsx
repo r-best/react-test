@@ -8,11 +8,15 @@ const routes = [
         path: "/"
     },
     {
-        name: "Projects",
+        name: "Software Projects",
         path: "/projects"
     },
     {
-        name: "Rocks",
+        name: "Astrophotography",
+        path: "/astro"
+    },
+    {
+        name: "Cool Rocks",
         path: "/rocks"
     }
 ]

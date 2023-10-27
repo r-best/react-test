@@ -6,3 +6,5 @@ export { default as arpabet } from './arpabet.png';
 export * as Logos from './logos';
 
 export * as RockPics from './rocks';
+
+export * as AstroPics from './astro';

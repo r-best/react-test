@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RockPics } from '../../assets'
-import RockCard from '../../components/rock-card/RockCard';
+import { RockCard } from '../../components';
 
 import "./rocks.css";
 

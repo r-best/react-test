@@ -1,26 +1,28 @@
-.rockcard {
+.astrocard {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
 }
 
-.rockcard-image {
-    height: 200px;
+.astrocard-image {
+    /* height: 200px; */
+    width: 75%;
     cursor: pointer;
 }
 
-.rockcard-text {
+.astrocard-text {
     text-align: center;
     padding: 10px;
 }
-.rockcard-text_name {
+.astrocard-text_name {
     margin: 0px;
 }
-.rockcard-text_desc {
+.astrocard-text_desc {
     /* display: flex;
     flex-direction: column;
     align-items: center; */
 }
-.rockcard-text_desc p {
+.astrocard-text_desc p {
     /* width: 50%; */
 }
