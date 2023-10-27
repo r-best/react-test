@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { Header, Content, Footer } from './containers';
+import { FullImgView } from './components';
 
 import './App.css';
 
@@ -12,6 +13,7 @@ function App() {
   })
   return (
     <div className="App">
+      <FullImgView />
       <Header />
       <Content />
       <Footer />

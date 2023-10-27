@@ -35,18 +35,8 @@ const ASTRO = [
 ]
 
 const Astro = () => {
-    const [fullViewImg, setFullViewImg] = useState(null);
-
-    const openFullImgView = e => {
-        setFullViewImg(e);
-    }
     return (
         <div className='astro'>
-            {fullViewImg !== null &&
-                <div id="fullSizeImgView" onClick={() => setFullViewImg(null)}>
-                    <img src={fullViewImg} alt="Full size astro pic" />
-                </div>
-            }
             <h1>Astrophotography</h1>
             <p></p>
             <div>
@@ -56,8 +46,7 @@ const Astro = () => {
                             imageThumb={item.imageFull} 
                             imageFull={item.imageFull} 
                             name={item.name} 
-                            desc_arr={item.desc}
-                            fullViewCallback={openFullImgView} />
+                            desc_arr={item.desc} />
                     </div>
                 ))}
             </div>

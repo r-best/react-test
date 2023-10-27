@@ -84,18 +84,8 @@ const ROCKS = [
 ]
 
 const Rocks = () => {
-    const [fullViewImg, setFullViewImg] = useState(null);
-
-    const openFullImgView = e => {
-        setFullViewImg(e.target.src);
-    }
     return (
         <div className='rocks'>
-            {fullViewImg !== null &&
-                <div id="fullSizeImgView" onClick={() => setFullViewImg(null)}>
-                    <img src={fullViewImg} alt="Full size rock pic" />
-                </div>
-            }
             <h1>Cool Rocks</h1>
             <div className='rocks-grid'>
                 {ROCKS.map((item, i) => (
@@ -103,8 +93,7 @@ const Rocks = () => {
                         <RockCard 
                             image={item.image} 
                             name={item.name} 
-                            desc_arr={item.desc}
-                            fullViewCallback={openFullImgView} />
+                            desc_arr={item.desc} />
                     </div>
                 ))}
             </div>
