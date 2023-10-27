@@ -9,7 +9,7 @@ import './App.css';
 
 function App() {
   useEffect(() => {
-    document.title = "bobbybest.dev"
+    document.title = "Bobby Best's Cool Project Website :)"
   })
   return (
     <div className="App">
