@@ -1,30 +1,43 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-
-    padding: 2rem 6rem;
-}
-
-.navbar__links-container {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.navbar__links-container p,
-.navbar__menu-container p {
     color: #fff;
     font-weight: 500;
     font-size: 18px;
     line-height: 25px;
     text-transform: capitalize;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar__links {
+    height: 100%;
+}
+.navbar__links-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 0rem 5rem;
+
+    height: 100%;
+}
+.navbar__links-container p {
+    height: 100%;
+}
+.navbar__links-container p a {
     margin: 0 1rem;
     cursor: pointer;
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar__menu {
@@ -33,7 +46,6 @@
     display: none;
     position: relative;
 }
-
 .navbar__menu-container {
     display: flex;
     justify-content: flex-end;
@@ -41,9 +53,7 @@
     flex-direction: column;
 
     text-align: end;
-    /* background: var(--color-footer); */
     background: var(--background-primary);
-    padding: 1rem 1.5rem;
     position: absolute;
     right: 0;
     top: 40px;
@@ -51,9 +61,16 @@
     border-radius: 5px;
     box-shadow: -5px 5px 10px 5px var(--blue-primary);
 }
-
 .navbar__menu-container p {
-    margin: 1rem 0;
+    width: 100%;
+    margin: 0.5rem;
+}
+.navbar__menu-container p a {
+    cursor: pointer;
+
+    height: 100%;
+    padding: 0.5rem 1.5rem;
+    display: block;
 }
 
 @media screen and (max-width: 700px) {
