@@ -24,6 +24,10 @@ a {
   color: unset;
   text-decoration: none;
 }
+a:hover {
+  color: var(--blue-primary);
+  /* text-decoration: underline; */
+}
 
 @media screen and (max-width: 1000px) {
   .App {
