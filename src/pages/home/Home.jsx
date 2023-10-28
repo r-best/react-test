@@ -23,7 +23,7 @@ const Home = () => {
             <p>Full time software developer based out of Richmond, VA. Full stack experience with a focus on enterprise and cloud-based solutions.</p>
             <p>Extensive experience with AWS architecture and services, and an interest in natural language processing and ML topics.</p>
             <div className='home__links'>
-                <a className='home__links' target="_blank" rel="noreferrer" href="https://github.com/r-best">Github<MdOpenInNew /></a>
+                <a className='global-buttonlink' target="_blank" rel="noreferrer" href="https://github.com/r-best">Github<MdOpenInNew /></a>
                 {/* <a className='home__links' target="_blank" rel="noreferrer" href="/">LinkedIn<MdOpenInNew /></a> */}
             </div>
 

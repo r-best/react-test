@@ -26,7 +26,22 @@ a {
 }
 a:hover {
   color: var(--blue-primary);
-  /* text-decoration: underline; */
+}
+
+.global-buttonlink {
+  margin: 0 10px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  color: black;
+  background-color: var(--blue-primary);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: inline;
+  white-space: nowrap;
+}
+.global-buttonlink:hover {
+  background-color: var(--blue-secondary);
 }
 
 @media screen and (max-width: 1000px) {
