@@ -1,7 +1,15 @@
 .astro {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
     width: 100%;
     /* background-color: #ffffff; */
+}
+
+.astro-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 75%;
 }

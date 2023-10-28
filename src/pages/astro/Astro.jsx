@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useEffect, useState } from 'react';
 import { AstroPics } from '../../assets'
 import { AstroCard } from '../../components';
 
@@ -9,7 +9,7 @@ const ASTRO = [
         imageThumb: AstroPics.andromeda_nk_100923,
         imageFull: AstroPics.andromeda_nk_100923,
         name: "Andromeda Galaxy",
-        date: "10-09-23",
+        date: "Oct 9 2023",
         location: "New Kent, VA",
         exposures: "Unknown exposure @ ISO 1600",
         desc: [
@@ -20,7 +20,7 @@ const ASTRO = [
         imageThumb: AstroPics.deneb_nk_100923,
         imageFull: AstroPics.deneb_nk_100923,
         name: "Deneb",
-        date: "10-09-23",
+        date: "Oct 9 2023",
         location: "New Kent, VA",
         exposures: "Unknown exposure @ ISO 1600",
         desc: [
@@ -31,7 +31,7 @@ const ASTRO = [
         imageThumb: AstroPics.nanebula_nk_100923,
         imageFull: AstroPics.nanebula_nk_100923,
         name: "North America Nebula",
-        date: "10-09-23",
+        date: "Oct 9 2023",
         location: "New Kent, VA",
         exposures: "30 10s exposures @ ISO 1600",
         desc: [
@@ -42,7 +42,7 @@ const ASTRO = [
         imageThumb: AstroPics.deneb_sp_100523,
         imageFull: AstroPics.deneb_sp_100523,
         name: "Deneb",
-        date: "10-05-23",
+        date: "Oct 5 2023",
         location: "Richmond, VA",
         exposures: "60 10s exposures @ ISO 1600",
         desc: [
@@ -51,7 +51,45 @@ const ASTRO = [
     },
 ]
 
+const SORTBY_NAME = "NAME"
+const SORTBY_DATE = "DATE"
+
+function compare(a, b) {
+    return a < b ? -1 : (a > b ? 1 : 0)
+}
+
+function changeSortMethod(sortMethod, isDescending) {
+    console.log("Updating sort method:", sortMethod, isDescending)
+    switch(sortMethod) {
+        case SORTBY_NAME:
+            ASTRO.sort((a, b) => {
+                var cmp = compare(a.name, b.name) * (isDescending ? -1 : 1)
+                if (cmp === 0)
+                    cmp = compare(Date.parse(b.date), Date.parse(a.date))
+                return cmp
+            })
+            break
+        case SORTBY_DATE:
+            ASTRO.sort((a, b) => {
+                var cmp = compare(Date.parse(b.date), Date.parse(a.date)) * (isDescending ? -1 : 1)
+                if (cmp === 0)
+                    cmp = compare(a.name, b.name)
+                return cmp
+            })
+            break
+        default:
+            console.log("Invalid sort method: ", sortMethod)
+            break;
+    }
+}
+
 const Astro = () => {
+    const [sortMethod, setSortMethod] = useState(SORTBY_DATE);
+    const [isDescending, setIsDescending] = useState(false);
+    useEffect(() => {
+        changeSortMethod(sortMethod, isDescending);
+    }, [sortMethod, isDescending])
+
     return (
         <div className='astro'>
             <h1>Astrophotography</h1>
@@ -63,7 +101,7 @@ const Astro = () => {
                     <ul>
                         <li>William Optics 0.8x Field Flattener</li>
                     </ul>
-                <li><b>Guide Scope:</b> William Optics ZenithStar 50mm guide scope, f/4</li>
+                <li><b>Guide Scope:</b> William Optics 50mm guide scope, f/4</li>
                 <li><b>Mount:</b> Celestron AVX Equatorial Mount</li>
                 <li><b>Camera:</b> Canon EOS Rebel T6i</li>
                     <ul>
@@ -71,7 +109,22 @@ const Astro = () => {
                     </ul>
                 <li><b>Filter(s):</b> Optolong L-Pro Deep Sky light pollution filter</li>
             </ul>
-            <p>Below is a collection of some of the photos I've taken!</p>
+            <p>Below is a collection of some of the photos I've taken, click to enlarge!</p>
+            <p />
+            <hr style={{width: "100%"}} />
+            <div className='astro-inputs'>
+                <div>
+                    Sort By:
+                    <select name='sort-method' onChange={e => {setSortMethod(e.target.value); changeSortMethod(e.target.value, isDescending)}}>
+                        <option value={SORTBY_DATE}>{SORTBY_DATE}</option>
+                        <option value={SORTBY_NAME}>{SORTBY_NAME}</option>
+                    </select>
+                </div>
+                <div>
+                    Desc?
+                    <input type='checkbox' checked={isDescending} onChange={e => {setIsDescending(e.target.checked); changeSortMethod(sortMethod, e.target.checked)}}></input>
+                </div>
+            </div>
             <hr style={{width: "100%"}} />
             <p />
             <div>
