@@ -12,7 +12,7 @@ const AstroCard = ({imageThumb, imageFull, name, date, location, exposures, desc
                 <p style={{margin: 0}}>{location}</p>
                 <p style={{margin: 0}}>{exposures}</p>
                 <div className='astrocard-text_desc'>
-                    {desc_arr.map((item, i) => (<p>{item}</p>))}
+                    {desc_arr.map((item, i) => (<p key={i}>{item}</p>))}
                 </div>
             </div>
         </div>

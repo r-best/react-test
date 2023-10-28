@@ -11,7 +11,7 @@ const RockCard = ({image, name, origin, obtained_at, desc_arr}) => {
                 <p><b>Origin:</b> {origin}</p>
                 <p><b>Obtained At:</b> {obtained_at}</p>
                 <div className='rockcard-text_desc'>
-                    {desc_arr.map((item, i) => (<p>{item}</p>))}
+                    {desc_arr.map((item, i) => (<p key={i}>{item}</p>))}
                 </div>
             </div>
         </div>
