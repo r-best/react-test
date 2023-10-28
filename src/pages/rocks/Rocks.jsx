@@ -102,6 +102,7 @@ const Rocks = () => {
                     </div>
                 ))}
             </div>
+            <p />
         </div>
     )
 };

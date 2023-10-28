@@ -19,13 +19,20 @@ const Home = () => {
     return (
         <div className='home'>
             <h1 className='home__title'>Bobby Best</h1>
-            <h3 className='home__subtitle'>Software Developer and Cool Rocks Enthusiast</h3>
-            <p>Full time software developer based out of Richmond, VA. Full stack experience with a focus on enterprise and cloud-based solutions.</p>
-            <p>Extensive experience with AWS architecture and services, and an interest in natural language processing and ML topics.</p>
+            <hr style={{width: "50%"}} />
+            <h3 className='home__subtitle'>Professional Software Developer</h3>
+            <h3 className='home__subtitle'>Amateur Astrophotographer</h3>
+            <h3 className='home__subtitle'>Aspiring Lapidary</h3>
+            <h3 className='home__subtitle'>AND</h3>
+            <h3 className='home__subtitle'>Cool Rocks Enthusiast</h3>
+            <hr style={{width: "50%"}} />
             <div className='home__links'>
                 <a className='global-buttonlink' target="_blank" rel="noreferrer" href="https://github.com/r-best">Github<MdOpenInNew /></a>
                 {/* <a className='home__links' target="_blank" rel="noreferrer" href="/">LinkedIn<MdOpenInNew /></a> */}
             </div>
+            {/* <p /> */}
+            <p>Full time software developer based out of Richmond, VA. Full stack experience with a focus on enterprise and cloud-based solutions.</p>
+            <p>Extensive experience with AWS architecture and services, and an interest in natural language processing and ML topics.</p>
 
             <h2>Preferred Languages/Technologies</h2>
             <div className='home__langs'>
@@ -52,12 +59,6 @@ const Home = () => {
                 <div>
                     <img src={Logos.react} alt="React logo" />
                     <p>React Web/Native</p>
-                </div>
-            </div>
-            <div className='home__langs'>
-                <div>
-                    <img src={placeholder} alt="Java logo" />
-                    <p>Java</p>
                 </div>
             </div>
 
