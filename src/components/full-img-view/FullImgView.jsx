@@ -1,13 +1,14 @@
-import { React, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 
 import "./full-img-view.css";
 
 const FullImgView = ({image}) => {
     const [fullViewImg, setFullViewImg] = useState(null);
-
-    window.openFullImgView = img => {
-        setFullViewImg(img);
-    }
+    useEffect(() => {
+        window.openFullImgView = img => {
+            setFullViewImg(img);
+        }
+    }, [])
     return (
         <div>
             {fullViewImg !== null &&

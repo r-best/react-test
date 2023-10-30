@@ -8,7 +8,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     height: 100%;
 }
 
@@ -22,15 +21,13 @@
     justify-content: flex-start;
     align-items: center;
 
-    padding: 0rem 5rem;
-
     height: 100%;
 }
 .navbar__links-container p {
     height: 100%;
+    margin: 0rem 1rem;
 }
 .navbar__links-container p a {
-    margin: 0 1rem;
     cursor: pointer;
 
     height: 100%;

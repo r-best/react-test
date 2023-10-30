@@ -6,6 +6,7 @@ import { Header, Content, Footer } from './containers';
 import { FullImgView } from './components';
 
 import './App.css';
+import SecretMenu from './components/secret-menu/SecretMenu';
 
 function App() {
   useEffect(() => {
@@ -13,10 +14,14 @@ function App() {
   })
   return (
     <div className="App">
-      <FullImgView />
       <Header />
       <Content />
       <Footer />
+      
+      <SecretMenu />
+
+      <FullImgView />
+
       <ToastContainer
         position='bottom-center'
         autoClose={2000}

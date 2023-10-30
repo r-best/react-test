@@ -12,6 +12,12 @@
     box-shadow: -15px -10px 5px 0px var(--blue-primary), 15px 10px 5px 0px var(--pink-primary);
 }
 
+.content-markiplier {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+}
+
 @media screen and (max-width: 1000px) {
     .content {
         width: 80%;

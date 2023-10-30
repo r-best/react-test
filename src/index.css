@@ -31,4 +31,6 @@ code {
   --pink-secondary: rgba(113, 0, 113, 1);
   --blue-primary: rgba(0, 188, 212, 1);
   --blue-secondary: rgba(0, 0, 113, 1);
+
+  --header-height: 5rem;
 }
