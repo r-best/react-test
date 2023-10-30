@@ -8,6 +8,10 @@ const SECRET_SETTINGS = {
     "mark": {
         default: false,
         callbacks: []
+    },
+    "jerma": {
+        default: false,
+        callbacks: []
     }
 }
 
@@ -44,14 +48,16 @@ const SecretMenu = () => {
             states[key].reactSetter = reactSetter
         }
     }
+    useEffect(() => {
+        for(var key in SECRET_SETTINGS){
+            window.registerSecretSettingListener(key, states[key].reactSetter)
+        }
+    }, [])
 
     var [isMenuOpen, setIsMenuOpen] = useState(false)
     useEffect(() => {
         window.toggleSecretMenu = () => {
             setIsMenuOpen(!isMenuOpen)
-        }
-        for(var key in SECRET_SETTINGS){
-            window.registerSecretSettingListener(key, states[key].reactSetter)
         }
     }, [isMenuOpen])
 
@@ -63,6 +69,7 @@ const SecretMenu = () => {
                         <h1>Secret Settings</h1>
                         <p />
                         <FormControlLabel control={<Switch checked={states['mark'].reactState} onChange={e => {states['mark'].reactSetter(e.target.checked); updateSecretSetting('mark', e.target.checked)}} />} label="Enable Markiplier" />
+                        <FormControlLabel control={<Switch checked={states['jerma'].reactState} onChange={e => {states['jerma'].reactSetter(e.target.checked); updateSecretSetting('jerma', e.target.checked)}} />} label="Enable Jerma" />
                     </div>
                 </div>
             }

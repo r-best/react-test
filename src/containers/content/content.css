@@ -18,11 +18,25 @@
     left: 0;
 }
 
+.content-jerma {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+}
+
 @media screen and (max-width: 1000px) {
     .content {
         width: 80%;
         /* border-radius: 0; */
         /* margin: 2vh 5vw; */
+    }
+
+    .content-markiplier {
+        width: 200px;
+    }
+
+    .content-jerma {
+        width: 200px;
     }
 }
 
@@ -32,5 +46,13 @@
         /* border-radius: 0; */
         /* margin: 2vh 5vw; */
         box-shadow: none;
+    }
+
+    .content-markiplier {
+        width: 150px;
+    }
+
+    .content-jerma {
+        width: 150px;
     }
 }
