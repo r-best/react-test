@@ -4,14 +4,15 @@ import "./content.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { jerma, markiplier } from '../../assets';
+import { SECRET_MARKIPLIER, SECRET_JERMA } from '../../components/secret-menu/SecretMenu';
 import { Home, PhoneticsGen, Projects, Rocks, Astro, TweetGen } from '../../pages'
 
 const Content = () => {
-    var [markEnabled, setMarkEnabled] = useState(window.getSecretSetting('mark'));
-    var [jermaEnabled, setJermaEnabled] = useState(window.getSecretSetting('jerma'))
+    var [markEnabled, setMarkEnabled] = useState(window.getSecretSetting(SECRET_MARKIPLIER));
+    var [jermaEnabled, setJermaEnabled] = useState(window.getSecretSetting(SECRET_JERMA))
     useEffect(() => {
-        window.registerSecretSettingListener('mark', setMarkEnabled)
-        window.registerSecretSettingListener('jerma', setJermaEnabled)
+        window.registerSecretSettingListener(SECRET_MARKIPLIER, setMarkEnabled)
+        window.registerSecretSettingListener(SECRET_JERMA, setJermaEnabled)
     }, [])
 
     return (

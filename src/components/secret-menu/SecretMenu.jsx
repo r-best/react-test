@@ -3,16 +3,20 @@ import React, { useEffect, useState } from 'react';
 
 import "./secretmenu.css";
 
+const SECRET_MARKIPLIER = 'mark'
+const SECRET_JERMA = 'jerma'
+
 // Default values of secret settings
-const SECRET_SETTINGS = {
-    "mark": {
-        default: false,
-        callbacks: []
-    },
-    "jerma": {
-        default: false,
-        callbacks: []
-    }
+const SECRET_SETTINGS = {}
+SECRET_SETTINGS[SECRET_MARKIPLIER] = {
+    label: "Enable Markiplier",
+    default: false,
+    callbacks: []
+}
+SECRET_SETTINGS[SECRET_JERMA] = {
+    label: "Enable Jerma",
+    default: false,
+    callbacks: []
 }
 
 window.getSecretSetting = (key) => {
@@ -68,8 +72,15 @@ const SecretMenu = () => {
                     <div className='secretmenu-content' onClick={e => {e.stopPropagation()}}>
                         <h1>Secret Settings</h1>
                         <p />
-                        <FormControlLabel control={<Switch checked={states['mark'].reactState} onChange={e => {states['mark'].reactSetter(e.target.checked); updateSecretSetting('mark', e.target.checked)}} />} label="Enable Markiplier" />
-                        <FormControlLabel control={<Switch checked={states['jerma'].reactState} onChange={e => {states['jerma'].reactSetter(e.target.checked); updateSecretSetting('jerma', e.target.checked)}} />} label="Enable Jerma" />
+                        {Object.keys(SECRET_SETTINGS).map((item, _) => (
+                            <FormControlLabel 
+                                key={item} 
+                                label={SECRET_SETTINGS[item].label} 
+                                control={<Switch 
+                                    checked={states[item].reactState} 
+                                    onChange={e => {states[item].reactSetter(e.target.checked); updateSecretSetting(item, e.target.checked)}} />
+                                } />
+                        ))}
                     </div>
                 </div>
             }
@@ -77,4 +88,8 @@ const SecretMenu = () => {
     )
 };
 
-export default SecretMenu;
+export {
+    SecretMenu,
+    SECRET_MARKIPLIER,
+    SECRET_JERMA
+};

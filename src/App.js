@@ -6,21 +6,21 @@ import { Header, Content, Footer } from './containers';
 import { FullImgView } from './components';
 
 import './App.css';
-import SecretMenu from './components/secret-menu/SecretMenu';
+import { SecretMenu } from './components/secret-menu/SecretMenu';
 
 function App() {
   useEffect(() => {
     document.title = "Bobby Best's Cool Project Website :)"
 
     // Set Konami code combo to open secret settings menu
-    const COMBO = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter']
+    const COMBO = ['arrowup', 'arrowup', 'arrowdown', 'arrowdown', 'arrowleft', 'arrowright', 'arrowleft', 'arrowright', 'b', 'a', 'enter']
     var timer = null
     var comboCount = 0
     var breakCombo = () => {comboCount = 0}
     document.addEventListener('keydown', e => {
       console.log(e.key, comboCount)
       clearTimeout(timer)
-      if(COMBO[comboCount] === e.key){
+      if(COMBO[comboCount] === e.key.toLocaleLowerCase()){
         comboCount++
         if(comboCount >= COMBO.length){
           window.toggleSecretMenu()
